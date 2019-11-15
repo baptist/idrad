@@ -31,18 +31,13 @@ class HDF5Dataset(Dataset):
             if label not in labels:
                 continue
 
-
             with h5py.File(filename, 'r') as file:
-                repeat = 1
-                if file[self._feature].shape[0] < 200:
-                    repeat = 1
 
-                while repeat > 0:
-                    self.frms_per_seq.append(file[self._feature].shape[0])
-                    repeat -= 1
-                    targets.append(labels.index(label))
-                    if self._in_memory:
-                        self._data.append(file[self._feature][:])
+                self.frms_per_seq.append(file[self._feature].shape[0])
+
+                targets.append(labels.index(label))
+                if self._in_memory:
+                    self._data.append(file[self._feature][:])
 
 
 
