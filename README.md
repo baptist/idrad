@@ -7,7 +7,7 @@ Paper can be found at: https://ieeexplore.ieee.org/document/8333730
 
 #### Data Set
 
-Data set can be downloaded from: http://imec-int.com/idrad
+Data set can be downloaded from: https://www.imec-int.com/en/IDRad
 
 Run command <i>python scripts/process_all.py --input \<root path\></i>
 
